@@ -20,6 +20,10 @@ build/
 *.db-journal
 *.db-wal
 *.db-shm
+data/
+
+# Browser walkthrough screenshots
+shots/
 
 # Logs
 *.log
