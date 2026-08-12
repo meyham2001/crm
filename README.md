@@ -1,18 +1,26 @@
-# Personal CRM — Setup
+# Personal CRM
 
-## For building the project with Claude Code
+A private, local-first sales CRM for organizations, contacts, deals, pipeline movement, activities,
+and follow-up tasks. It uses React and Vite for the UI, Express for the local API, and SQLite for
+persistence. No account or network connection is needed once dependencies are installed.
 
-1. Install Claude Code and login as described [here](https://code.claude.com/docs/en/quickstart#step-1-install-claude-code)
-2. Start Claude with `claude --permission-mode auto`
-3. Enter: `Build the entire project; only stop when success criteria are met and the product is running`
+## Start the app
 
-## For building with Codex, Cursor or Antigravity
+```bash
+npm install
+npm run dev
+```
 
-1. Exactly the same instructions, but substitute your favorite Coding Agent!
+Open [http://localhost:5173](http://localhost:5173). The first launch creates `data/crm.sqlite` and
+seeds realistic sample data. The API runs on port 3001; both processes are started by the one
+`npm run dev` command.
 
-## For building with Pi and Open-Source models
+## Verify the project
 
-Open a terminal and run:
-`git checkout pi`
+```bash
+npm test
+npm run build
+```
 
-This README should be updated automatically; follow the new instructions
+The database can be reset by stopping the app, removing `data/crm.sqlite`, and starting it again.
+The app is designed for a single local user and stores all data on the machine.
